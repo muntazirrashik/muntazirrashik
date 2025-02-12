@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blank Scrollable Website</title>
+    <title>Responsive Scrollable Website</title>
     <style>
         * {
             margin: 0;
@@ -13,10 +13,9 @@
         html, body {
             height: 100%;
             scroll-behavior: smooth;
-            overflow: hidden; /* Remove scrollbar */
-            background-color: black; /* Set the background of the entire page to black */
-            color: white; /* Text color is white for contrast */
-            font-family: Arial, sans-serif; /* Set font family */
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
         }
         .container {
             width: 100%;
@@ -25,94 +24,83 @@
         }
         section {
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex: 1;
+            padding: 20px;
         }
 
-        /* Header section (1 inch white header) */
+        /* Header */
         header {
             width: 100%;
-            height: 1in; /* 1 inch header */
+            height: 1in;
             background-color: white;
         }
 
-        /* First section (landing page) */
+        /* Landing Section */
         .landing-section {
             display: flex;
-            align-items: center; /* Vertically center the content */
-            justify-content: center; /* Horizontally center the content */
-            padding: 40px; /* Increase padding for more space */
-            gap: 50px; /* Larger space between the image and text */
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 30px;
         }
 
-        /* Image style (Square photo) */
         .photo {
-            width: 500px; /* Increased image size */
-            height: 500px; /* 1:1 ratio */
-            object-fit: cover; /* Ensure the image covers the square */
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: cover;
         }
 
-        /* Text style */
         .about-text {
-            max-width: 800px; /* Increase max-width for more space for text */
-            font-size: 1.2em; /* Larger text */
-            line-height: 1.5; /* Increased line height for readability */
+            max-width: 800px;
+            font-size: 1.2em;
+            line-height: 1.5;
         }
 
         .about-text h1 {
-            font-size: 2.5em; /* Larger heading */
-            margin-bottom: 20px; /* Space below the heading */
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
-        /* Responsive adjustments */
+        /* Responsive Design */
         @media (max-width: 1024px) {
-            .landing-section {
-                flex-direction: column; /* Stack image and text vertically on smaller screens */
-                text-align: center;
-            }
-            .photo {
-                width: 400px; /* Slightly smaller image size */
-                height: 400px;
-            }
             .about-text {
-                max-width: 600px; /* Adjust text width for medium screens */
+                max-width: 600px;
             }
         }
 
         @media (max-width: 768px) {
-            .photo {
-                width: 350px;
-                height: 350px;
-            }
             .about-text {
-                max-width: 500px; /* Adjust text width for smaller screens */
+                max-width: 500px;
+                font-size: 1.1em;
             }
         }
 
         @media (max-width: 480px) {
-            .photo {
-                width: 300px;
-                height: 300px;
-            }
             .about-text {
-                max-width: 400px; /* Adjust text width for very small screens */
-                font-size: 1em; /* Adjust text size for small screens */
+                max-width: 90%;
+                font-size: 1em;
+            }
+            .photo {
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <header></header> <!-- 1-inch blank white header -->
+    <header></header>
     <div class="container">
-        <!-- Landing Page Section -->
         <section class="landing-section">
             <img src="me.jpg" alt="Photo" class="photo">
             <div class="about-text">
                 <h1>Muntazir Rashik</h1>
-                <p>Mitochondria are membrane-bound cell organelles (mitochondrion, singular) that generate most of the chemical energy needed to power the cell's biochemical reactions. Chemical energy produced by the mitochondria is stored in a small molecule called adenosine triphosphate (ATP). Mitochondria contain their own small chromosomes. Generally, mitochondria, and therefore mitochondrial DNA, are inherited only from the mother.</p>
+                <p>Mitochondria are membrane-bound cell organelles that generate most of the chemical energy needed to power the cell's biochemical reactions. Chemical energy produced by the mitochondria is stored in adenosine triphosphate (ATP).</p>
             </div>
         </section>
-        
-        <!-- Other Sections -->
         <section></section>
         <section></section>
         <section></section>
