@@ -1,109 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Scrollable Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            height: 100%;
-            scroll-behavior: smooth;
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
-            padding: 20px;
-        }
-
-        /* Header */
-        header {
-            width: 100%;
-            height: 1in;
-            background-color: white;
-        }
-
-        /* Landing Section */
-        .landing-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            text-align: center;
-            gap: 30px;
-        }
-
-        .photo {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .about-text {
-            max-width: 800px;
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-
-        .about-text h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .about-text {
-                max-width: 600px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .about-text {
-                max-width: 500px;
-                font-size: 1.1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .about-text {
-                max-width: 90%;
-                font-size: 1em;
-            }
-            .photo {
-                max-width: 300px;
-            }
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header></header>
-    <div class="container">
-        <section class="landing-section">
-            <img src="me.jpg" alt="Photo" class="photo">
-            <div class="about-text">
-                <h1>Muntazir Rashik</h1>
-                <p>Mitochondria are membrane-bound cell organelles that generate most of the chemical energy needed to power the cell's biochemical reactions. Chemical energy produced by the mitochondria is stored in adenosine triphosphate (ATP).</p>
-            </div>
+    <header>
+
+        <div class="vr-left"></div>
+        <div class="vr-right"></div> <!-- Vertical line to the left of the logo -->
+        <img src="img/me.jpg" alt="logo" class="logo">
+        <h1><mark>Muntazir Rashik</mark></h1>
+        <h3><a href="#">Home</a></h3>
+        <h3><a href="#">About</a></h3>
+        <hr>
+    </header>
+
+    <nav>
+        <a href="https://www.x.com" target="_blank"><img src="img/twitter.png" alt="x"></a>
+        <a href="https://www.github.com/muntazirrashik" target="_blank"> <img src="img/github.png" alt="github"></a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Projects</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus at quaerat praesentium dolores quisquam repellendus repudiandae libero facilis quis, voluptatem fugit consectetur eos accusantium voluptas perspiciatis illum fuga soluta officiis ea magni maxime. Accusamus facere impedit accusantium labore soluta quia ea fugiat autem veniam optio ducimus aut amet architecto voluptatibus quae, reiciendis totam incidunt corporis. Error nostrum, blanditiis debitis rem impedit iure numquam quia nobis, provident voluptatibus at dignissimos autem, sunt dolor vel in fugit ipsa eius! Ab eaque temporibus illo in ex ut neque, rerum commodi? Iste alias dolorum nihil at dolor repellat optio quo dolorem earum placeat porro dolores mollitia inventore delectus voluptatum quos, sunt dicta labore vel laudantium corporis perferendis, reprehenderit ea. Nam facilis nemo a corporis aspernatur cum iusto minus sed, maiores molestias blanditiis impedit qui. Vero similique, molestiae est eos saepe totam, cupiditate distinctio dolore, praesentium incidunt reprehenderit delectus nesciunt ullam! Dignissimos magni consectetur animi rem necessitatibus a dolor alias placeat. Doloremque alias, nobis hic sapiente adipisci doloribus quaerat exercitationem. Voluptate, rerum asperiores perspiciatis quae accusantium commodi cupiditate ratione mollitia totam! In est, esse ipsam blanditiis, optio laboriosam doloremque aspernatur porro expedita ratione fugit nam molestiae. Ad tempore corporis nesciunt? Asperiores optio impedit totam nihil atque, repellat, facilis hic perferendis voluptas, quas sed! Sequi dolore nemo corrupti? At omnis asperiores temporibus. In corrupti rerum iusto facere ipsa? Repellendus provident vitae molestias dolorum, veritatis earum sed laboriosam eos tenetur ratione dicta saepe nisi voluptatem reiciendis omnis odit eius. Eaque placeat accusamus alias voluptatem et tenetur debitis?</p>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
-    </div>
+    </main>
+
+    
 </body>
+
 </html>
