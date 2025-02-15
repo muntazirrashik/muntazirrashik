@@ -13,7 +13,7 @@
 
         <div class="vr-left"></div>
         <div class="vr-right"></div> <!-- Vertical line to the left of the logo -->
-        <img src="me.jpg" alt="logo" class="logo">
+        <img src="img/me.jpg" alt="logo" class="logo">
         <h1><mark>Muntazir Rashik</mark></h1>
         <h3><a href="#">Home</a></h3>
         <h3><a href="#">About</a></h3>
@@ -21,8 +21,8 @@
     </header>
 
     <nav>
-        <a href="https://www.x.com" target="_blank"><img src="twitter.png" alt="x"></a>
-        <a href="https://www.github.com/muntazirrashik" target="_blank"> <img src="github.png" alt="github"></a>
+        <a href="https://www.x.com" target="_blank"><img src="img/twitter.png" alt="x"></a>
+        <a href="https://www.github.com/muntazirrashik" target="_blank"> <img src="img/github.png" alt="github"></a>
     </nav>
 
     <main>
@@ -30,9 +30,44 @@
             <h2>Projects</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus at quaerat praesentium dolores quisquam repellendus repudiandae libero facilis quis, voluptatem fugit consectetur eos accusantium voluptas perspiciatis illum fuga soluta officiis ea magni maxime. Accusamus facere impedit accusantium labore soluta quia ea fugiat autem veniam optio ducimus aut amet architecto voluptatibus quae, reiciendis totam incidunt corporis. Error nostrum, blanditiis debitis rem impedit iure numquam quia nobis, provident voluptatibus at dignissimos autem, sunt dolor vel in fugit ipsa eius! Ab eaque temporibus illo in ex ut neque, rerum commodi? Iste alias dolorum nihil at dolor repellat optio quo dolorem earum placeat porro dolores mollitia inventore delectus voluptatum quos, sunt dicta labore vel laudantium corporis perferendis, reprehenderit ea. Nam facilis nemo a corporis aspernatur cum iusto minus sed, maiores molestias blanditiis impedit qui. Vero similique, molestiae est eos saepe totam, cupiditate distinctio dolore, praesentium incidunt reprehenderit delectus nesciunt ullam! Dignissimos magni consectetur animi rem necessitatibus a dolor alias placeat. Doloremque alias, nobis hic sapiente adipisci doloribus quaerat exercitationem. Voluptate, rerum asperiores perspiciatis quae accusantium commodi cupiditate ratione mollitia totam! In est, esse ipsam blanditiis, optio laboriosam doloremque aspernatur porro expedita ratione fugit nam molestiae. Ad tempore corporis nesciunt? Asperiores optio impedit totam nihil atque, repellat, facilis hic perferendis voluptas, quas sed! Sequi dolore nemo corrupti? At omnis asperiores temporibus. In corrupti rerum iusto facere ipsa? Repellendus provident vitae molestias dolorum, veritatis earum sed laboriosam eos tenetur ratione dicta saepe nisi voluptatem reiciendis omnis odit eius. Eaque placeat accusamus alias voluptatem et tenetur debitis?</p>
         </section>
+        <section>
+            <audio controls src="audio.mp3"></audio>
+        </section>
     </main>
 
     
 </body>
+
+<script>
+    const audio = document.getElementById('audio');
+    const playPauseButton = document.getElementById('play-pause');
+    const progress = document.getElementById('progress');
+    const timeDisplay = document.getElementById('time');
+
+    playPauseButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playPauseButton.textContent = '❚❚';
+        } else {
+            audio.pause();
+            playPauseButton.textContent = '▶';
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progress.style.width = `${percent}%`;
+
+        const currentTime = formatTime(audio.currentTime);
+        const duration = formatTime(audio.duration);
+        timeDisplay.textContent = `${currentTime} / ${duration}`;
+    });
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+</script>
 
 </html>
